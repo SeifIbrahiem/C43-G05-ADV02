@@ -15,22 +15,50 @@ namespace C43_G05_ADV02
            Console.WriteLine();
         }
 
-        #region problemwithgenericlist
-        //public static int SumArrayList(ArrayList List)
-        //{
-        //    int sum = 0;
-        //    if (List is not null)
-        //    {
-        //        for (int i = 0; i < List.Count; i++)  // unboxing reference type to value type un safe 
+        
+        public static int SumArrayList(ArrayList List)
+        {
+           int sum = 0;
+            if (List is not null)
+            {
+                for (int i = 0; i < List.Count; i++)  // unboxing reference type to value type un safe 
 
-        //        {
-        //            sum += (int)List[i];
+                {
+                    sum += (int)List[i];
 
-        //        }
-        //    }
-        //    return sum;
-        //} 
-        #endregion
+               }
+            }
+            return sum;
+        } 
+        
+
+        public static void PrintList <T>(List<T> values)
+        {
+           Console.WriteLine();
+            foreach (T item in values)
+            {
+                Console.Write($" { item }  ");
+            }
+            Console.WriteLine();
+        }
+
+        //generic list
+        public static int SumList(List <int> List)
+        {
+            int sum = 0;
+            if (List is not null)
+            {
+                for (int i = 0; i < List.Count; i++)  
+
+                {
+                    sum += List[i];
+
+                }
+            }
+            return sum;
+        }
+
+
         static void Main(string[] args)
         {
             #region what is the ds / non generic lists
@@ -120,6 +148,50 @@ namespace C43_G05_ADV02
             //list.Add("hello");
             //int sum = SumArrayList(list);
             //Console.WriteLine(sum); 
+            #endregion
+
+            #region genericlist
+            //List<int> list = new List<int>(new int[] {1,2,3,4});
+            //PrintList(list);
+            //list.Add(11);
+            //list.Add(12);
+            //PrintList(list);
+            List<int> list = new List<int>();
+            //list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
+            //PrintList(list);
+            list.Add(0);
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            //PrintList(list);
+            //int sum = SumList (list);
+            //Console.WriteLine(sum);
+            //list.AddRange(new List<int>() { 10, 20, 30 });
+            //PrintList(list);
+            //list.AsReadOnly();
+            //PrintList(list);
+
+            //int i = list.BinarySearch(20);
+            //Console.WriteLine($"i: {i}  ");
+
+            // Employee EO1 = new Employee() { Id=1 ,Name="seif",salary=1000 ,age = 29 };
+            // Employee EO2 = new Employee() { Id=1, Name="samy",salary=1000, age = 29 };
+            // Employee EO3 = new Employee() { Id=1, Name="ali", salary=1000, age = 29 };
+            // Employee EO4 = new Employee() { Id=1, Name="omar",salary=1000, age = 29 };
+            // List<Employee> employees = new List<Employee> {EO1, EO2 ,EO3 , EO4 };
+            //int i =  employees.BinarySearch(EO1);
+            // Console.WriteLine(i);
+
+            //Console.WriteLine($"count: {list.Count} , capacity: {list.Capacity}");
+            //         list.EnsureCapacity(list.Count);
+            //Console.WriteLine($"count: {list.Count} , capacity: {list.Capacity}");
+            //list.EnsureCapacity(10);
+            //Console.WriteLine($"count: {list.Count} , capacity: {list.Capacity}");
+
+            //List<int>result = list.GetRange(0, 2);
+            //PrintList(result);
             #endregion
 
 
