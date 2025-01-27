@@ -58,6 +58,28 @@ namespace C43_G05_ADV02
             return sum;
         }
 
+        //linkedlist 
+        public static void PrintLinkedList(LinkedList<int> linkedlist)
+        {
+            Console.Write("null");
+            foreach (int item in linkedlist)
+            {
+                Console.Write($"<-  {item}   ->");
+            }
+            Console.WriteLine("null");
+            Console.WriteLine();
+        }
+
+        //stack
+        public static void printstack(Stack<int> stack)
+        { 
+            Console.Write("null");
+            foreach(int item in stack)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+        }
 
         static void Main(string[] args)
         {
@@ -156,15 +178,15 @@ namespace C43_G05_ADV02
             //list.Add(11);
             //list.Add(12);
             //PrintList(list);
-            List<int> list = new List<int>();
+            //List<int> list = new List<int>();
             //list.Add(1);
             //list.Add(2);
             //list.Add(3);
             //PrintList(list);
-            list.Add(0);
-            list.Add(1);
-            list.Add(2);
-            list.Add(3);
+            // list.Add(0);
+            // list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
             //PrintList(list);
             //int sum = SumList (list);
             //Console.WriteLine(sum);
@@ -193,6 +215,41 @@ namespace C43_G05_ADV02
             //List<int>result = list.GetRange(0, 2);
             //PrintList(result);
             #endregion
+
+            #region linked list
+            //LinkedList<int> linkedlist = new LinkedList<int>();
+            //linkedlist.AddFirst(1);
+            //linkedlist.AddFirst(2);
+            //linkedlist.FindLast(3);
+            //linkedlist.AddLast(4);
+            //PrintLinkedList(linkedlist);
+            // LinkedList<int> linkedlist = new LinkedList<int>();
+            //LinkedListNode<int> node = new LinkedListNode<int>(3);
+            //linkedlist.AddLast(node);
+            //linkedlist.AddBefore(node, 1);
+            //PrintLinkedList(linkedlist); 
+            #endregion
+
+            #region stack
+            //Stack<int> stack = new Stack<int>();
+            //stack.Push(0);
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+            //stack.Push(5);
+            //int top = stack.Peek();
+            //Console.WriteLine(top);
+            //printstack(stack);
+            //stack.Peek();
+            //bool flag = stack.TryPeek(out int top);
+            //stack.Pop();
+            //bool flag = stack.TryPeek(out int top);
+            //undo  : ctrl + z
+            #endregion
+
+
+
 
 
         }
