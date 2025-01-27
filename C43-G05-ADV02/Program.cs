@@ -14,6 +14,23 @@ namespace C43_G05_ADV02
             }
            Console.WriteLine();
         }
+
+        #region problemwithgenericlist
+        //public static int SumArrayList(ArrayList List)
+        //{
+        //    int sum = 0;
+        //    if (List is not null)
+        //    {
+        //        for (int i = 0; i < List.Count; i++)  // unboxing reference type to value type un safe 
+
+        //        {
+        //            sum += (int)List[i];
+
+        //        }
+        //    }
+        //    return sum;
+        //} 
+        #endregion
         static void Main(string[] args)
         {
             #region what is the ds / non generic lists
@@ -93,6 +110,17 @@ namespace C43_G05_ADV02
             #endregion
 
 
+            #region problemwithgenericlist
+            //ArrayList list = new ArrayList();
+            //list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
+            //list.Add(4);
+            //list.Add(5);
+            //list.Add("hello");
+            //int sum = SumArrayList(list);
+            //Console.WriteLine(sum); 
+            #endregion
 
 
         }
