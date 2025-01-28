@@ -81,6 +81,17 @@ namespace C43_G05_ADV02
             Console.WriteLine();
         }
 
+        //queue
+        public static void printQueue(Queue<int> queue)
+        {
+            Console.WriteLine();
+            foreach (int item in queue)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+        }
+
         static void Main(string[] args)
         {
             #region what is the ds / non generic lists
@@ -248,8 +259,15 @@ namespace C43_G05_ADV02
             //undo  : ctrl + z
             #endregion
 
+            #region queue
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2); 
+            //queue.Enqueue(3);
+            //printQueue(queue);
+            //queue.Dequeue();
 
-
+            #endregion
 
 
         }
